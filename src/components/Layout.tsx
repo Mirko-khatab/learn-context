@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React, { FC } from 'react'
 import Nav from './Nav';
+import Footer from './Footer';
 
 type Type =React.FC<{
     children :any ;
@@ -15,7 +16,9 @@ const Layout:Type = ({children}) => {
         <link rel="shortcut icon" href="/img/Logo.ico" />
       </Head>
     <div>
+      <Nav/>
 {children}
+<Footer/>
     </div>
       
     </>
