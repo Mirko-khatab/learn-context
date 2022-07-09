@@ -1,26 +1,20 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState } from 'react'
 
-export const UserContext = createContext({});
+export const UserContext = createContext({})
 
-// This context provider is passed to any component requiring the context
-export const UserProvider:React.FC = ({ children }) => {
-  // all data we want to share
-    // for test
-  const [name,setname]=useState('mirkokawa')
-  
-
-  
+const UserProvider: React.FC = ({ children }) => {
+  const [input, setinput] = useState<any>([
+    {
+    name:""
+     },
+   
+  ])
+  const [them, setthem] = useState<boolean>(false)
   return (
-    <UserContext.Provider
-      value={{
-        name,
-        setname,
-         
-        }}
-    >
+    <UserContext.Provider value={{ input, setinput, them, setthem }}>
       {children}
     </UserContext.Provider>
-  );
-};
+  )
+}
 
 export default UserProvider

@@ -16,9 +16,9 @@ const Layout:Type = ({children}) => {
         <link rel="shortcut icon" href="/img/Logo.ico" />
       </Head>
     <div>
-      <Nav/>
+        
 {children}
-<Footer/>
+    
     </div>
       
     </>
